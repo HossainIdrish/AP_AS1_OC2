@@ -5,3 +5,34 @@ html, body {
 #map {
   height: 100%;
 }
+
+/* Define styles for clusters with fewer than 10 markers */
+.cluster-small {
+    background-color: gray;
+}
+
+/* Define styles for clusters with 10 to 49 markers */
+.cluster-medium {
+    background-color: orange;
+}
+
+/* Define styles for clusters with 50 or more markers */
+.cluster-large {
+    background-color: black;
+}
+
+/* Additional styles for the cluster icon content */
+.custom-cluster-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 55%;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Additional styles for the cluster icon container */
+.custom-cluster {
+    border: 3px solid #fff;
+}
