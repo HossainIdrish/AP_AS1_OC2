@@ -1,16 +1,16 @@
-var map = L.map('map').setView([37.7, -122.4], 11);
+var map = L.map('map').setView([37.7, -122.4], 12);
 
 var Stamen_Terrain = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 20,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Marker colors: green for clusters under 10, blue for under 50, and red for the rest
+// The Marker color are changed based on the cluster size less than 10 is green, less than 50 is blue and remaining as red
 
 $.getJSON("https://raw.githubusercontent.com/orhuna/WebGIS_SLU_M1/main/Module%201/Assignment%201/data/sf_crime.geojson", function (data) {
     var ratIcon = L.icon({
         iconUrl: 'https://pngimg.com/uploads/pin/small/pin_PNG101.png',
-        iconSize: [60, 60]
+        iconSize: [65, 65]
     });
 
     var rodents = L.geoJson(data, {
